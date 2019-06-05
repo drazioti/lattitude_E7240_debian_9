@@ -1,0 +1,33 @@
+Debian 9, lattitude E7240
+=========================
+
+---wifi
+$su
+#apt-get update
+#apt-get upgrade
+
+#apt-get install firmware-iwlwifi
+#modprobe -r iwlwifi
+#modprobe iwlwifi
+#apt-get install wicd
+
+---other
+#sudo add user <username> sudo
+$sudo apt-get install git
+$sudo apt-get install aptitude
+$sudo aptitude update
+$sudo aptitude libreoffice
+$sudo apt-get install nmap
+$sudo apt-get install texlive-full
+$sudo apt-get install texmaker
+$sudo aptitude python3-pip
+
+===  fix tapping
+in /etc/X11/xorg.conf.d/40-libinput.conf 
+at
+
+Section "InputClass
+        Identifier "libinput touchpad catchall"
+add 
+	Option "Tapping" "on"
+
