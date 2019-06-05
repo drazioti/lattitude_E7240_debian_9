@@ -22,6 +22,11 @@ $sudo apt-get install texlive-full
 $sudo apt-get install texmaker
 $sudo aptitude python3-pip
 
+- photograph
+$sudo apt-get install darktable #Awesome editing software
+$sudo apt-get install gphoto2  # Import your photos from your camera. Command line tool.
+
+
 ===  fix tapping
 in /etc/X11/xorg.conf.d/40-libinput.conf 
 at
@@ -30,4 +35,7 @@ Section "InputClass
         Identifier "libinput touchpad catchall"
 add 
 	Option "Tapping" "on"
+
+=== Bugs
+Does not correctly starts after hinernations (keyboard is inactive)
 
