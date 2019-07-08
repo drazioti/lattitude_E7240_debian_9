@@ -37,5 +37,23 @@ add
 	Option "Tapping" "on"
 
 === Bugs
-Does not correctly starts after hinernations (keyboard is inactive)
+- Does not correctly starts after hinernations (keyboard is inactive)
+- It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
+to be deleted. Cross fingers before update a debian system!
+You can use the following
+/etc/X11/xorg.conf.d/40-libinput.conf file.
+
+Section "InputClass"
+	Identifier	"Synaptics TM3096-001"
+	Driver		"libinput"
+	MatchIsTouchpad	"on"
+	Option 	"Tapping"	"on"
+	Option	"TappingDrag"	"on"
+	Option 	"TappingButtonMap"	"lrm"
+	Option	"AccelSpeed" "0.4"
+	Option	"ScrollMethod"	"twofinger,edge"
+	Option	"HorizontalScrolling"	"on"
+	Option	"DisableWhileTyping" "on"
+EndSection
+
 
