@@ -11,7 +11,11 @@ $su
 #modprobe iwlwifi
 #apt-get install wicd
 
----other
+--- thunar archive manager
+$sudo apt-get install thunar-archive-plugin
+$sudo apt-get install file-roller
+
+--- other
 #sudo add user <username> sudo
 $sudo apt-get install git
 $sudo apt-get install aptitude
@@ -22,13 +26,10 @@ $sudo apt-get install texlive-full
 $sudo apt-get install texmaker
 $sudo aptitude python3-pip
 
-- photograph
+--- photograph
 $sudo apt-get install darktable #Awesome editing software
 $sudo apt-get install gphoto2  # Import your photos from your camera. Command line tool.
 
-- thunar archive manager
-$sudo apt-get install file-roller
-$sudo apt-get install file-roller
 
 
 ===  fix tapping
