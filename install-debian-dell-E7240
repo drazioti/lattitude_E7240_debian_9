@@ -39,7 +39,8 @@ add
 === Bugs
 - Does not correctly starts after hinernations (keyboard is inactive)
 - It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
-to be deleted. Cross fingers before update a debian system!
+to be deleted [https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931627]. 
+Cross your fingers before update a debian system!
 You can use the following
 /etc/X11/xorg.conf.d/40-libinput.conf file.
 
