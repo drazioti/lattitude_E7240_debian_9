@@ -26,6 +26,10 @@ $sudo aptitude python3-pip
 $sudo apt-get install darktable #Awesome editing software
 $sudo apt-get install gphoto2  # Import your photos from your camera. Command line tool.
 
+- thunar archive manager
+$sudo apt-get install file-roller
+$sudo apt-get install file-roller
+
 
 ===  fix tapping
 in /etc/X11/xorg.conf.d/40-libinput.conf 
