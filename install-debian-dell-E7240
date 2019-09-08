@@ -30,6 +30,12 @@ $sudo aptitude python3-pip
 $sudo apt-get install darktable #Awesome editing software
 $sudo apt-get install gphoto2  # Import your photos from your camera. Command line tool.
 
+=== backlight
+press fn + -->
+to change the time
+$sudo nano /sys/module/dell_laptop/drivers/platform:dell-laptop/dell-laptop/leds/dell::kbd_backlight/stop_timeout
+
+and change 10s to 1min
 
 
 ===  fix tapping
