@@ -1,2 +1,2 @@
 we track all the changes we need to smoothly install debian 9
-in a lattitude E7249 dell notebook.
+in a lattitude E7240 dell notebook.

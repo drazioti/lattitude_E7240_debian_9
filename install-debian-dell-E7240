@@ -2,6 +2,7 @@ Debian 9, lattitude E7240
 =========================
 
 ---wifi
+
 $su
 #apt-get update
 #apt-get upgrade
@@ -10,6 +11,9 @@ $su
 #modprobe -r iwlwifi
 #modprobe iwlwifi
 #apt-get install wicd
+
+It may occur after update/upgrade the names for network interfaces to change. Check with ifconfig. This may have
+result on your wifi connections.
 
 --- thunar archive manager
 $sudo apt-get install thunar-archive-plugin
@@ -37,7 +41,6 @@ $sudo nano /sys/module/dell_laptop/drivers/platform:dell-laptop/dell-laptop/leds
 
 and change 10s to 1min
 
-
 ===  fix tapping
 in /etc/X11/xorg.conf.d/40-libinput.conf 
 at
@@ -51,7 +54,9 @@ add
 - Does not correctly starts after hinernations (keyboard is inactive)
 - It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
 to be deleted [https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931627]. 
-Cross your fingers before update a debian system!
+
+* fingers crossed, before update a debian system. :( *
+
 You can use the following
 /etc/X11/xorg.conf.d/40-libinput.conf file.
 
@@ -67,5 +72,3 @@ Section "InputClass"
 	Option	"HorizontalScrolling"	"on"
 	Option	"DisableWhileTyping" "on"
 EndSection
-
-
