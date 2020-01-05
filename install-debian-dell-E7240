@@ -50,6 +50,17 @@ Section "InputClass
 add 
 	Option "Tapping" "on"
 
+=== Change your dns server
+$sudo apt-get install resolvconf
+edit /etc/resolvconf/resolv.conf.d/head
+
+$sudo nano /etc/resolvconf/resolv.conf.d/head
+#add 
+nameserver 1.1.1.1
+#exit
+
+Reboot
+
 === Bugs
 - Does not correctly starts after hinernations (keyboard is inactive)
 - It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
