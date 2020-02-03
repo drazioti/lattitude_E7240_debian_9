@@ -63,7 +63,7 @@ Reboot
 
 === Bugs
 - Does not correctly starts after hinernations (keyboard is inactive)
-- It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
+It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
 to be deleted [https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931627]. 
 
 * fingers crossed, before update a debian system. :( *
@@ -83,3 +83,8 @@ Section "InputClass"
 	Option	"HorizontalScrolling"	"on"
 	Option	"DisableWhileTyping" "on"
 EndSection
+
+- if hdmi dows not working in an exterior device
+try
+$rm -R ~/.config/pulse
+
