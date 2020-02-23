@@ -1,6 +1,10 @@
 Debian 9, lattitude E7240
 =========================
 
+=====          It may happen ...        =====
+===== Welcome to the debian buggy world =====
+===== Although, we love debian!         =====
+
 ---wifi
 
 $su
@@ -34,14 +38,14 @@ $sudo aptitude python3-pip
 $sudo apt-get install darktable #Awesome editing software
 $sudo apt-get install gphoto2  # Import your photos from your camera. Command line tool.
 
-=== backlight
+--- backlight
 press fn + -->
 to change the time
 $sudo nano /sys/module/dell_laptop/drivers/platform:dell-laptop/dell-laptop/leds/dell::kbd_backlight/stop_timeout
 
 and change 10s to 1min
 
-===  fix tapping
+---  fix tapping
 in /etc/X11/xorg.conf.d/40-libinput.conf 
 at
 
@@ -50,7 +54,8 @@ Section "InputClass
 add 
 	Option "Tapping" "on"
 
-=== Change your dns server
+--- Change your dns server
+
 $sudo apt-get install resolvconf
 edit /etc/resolvconf/resolv.conf.d/head
 
@@ -61,9 +66,30 @@ nameserver 1.1.1.1
 
 Reboot
 
-=== Bugs
+--- Sound problems
+
+- HDMI does not have sound : Try 
+  $rm -R ~/.config/pulse
+- For some reason you don't have sound in your speaker 
+  (it may happen, welcome to debian world!) : Try 
+  $amixer sset 'Master' unmute
+
+--- VirtualBox problems
+
+- It may happen... try : 
+  $cd ~/.config/Virtualbox
+  $rm VirtualBox.xml 
+
+
+							============
+							=== Bugs ===
+							============
+
+
 - Does not correctly starts after hinernations (keyboard is inactive)
-It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
+Although using I3 this does not happen.
+
+- It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
 to be deleted [https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931627]. 
 
 * fingers crossed, before update a debian system. :( *
@@ -83,8 +109,4 @@ Section "InputClass"
 	Option	"HorizontalScrolling"	"on"
 	Option	"DisableWhileTyping" "on"
 EndSection
-
-- if hdmi dows not working in an exterior device
-try
-$rm -R ~/.config/pulse
 
