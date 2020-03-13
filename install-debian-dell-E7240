@@ -19,6 +19,31 @@ $su
 It may occur after update/upgrade the names for network interfaces to change. Check with ifconfig. This may have
 result on your wifi connections.
 
+---set up static ip
+turn of wifi from wicd
+$sudo nano /etc/network/interfaces
+  GNU nano 3.2                /etc/network/interfaces                           
+[inside the file interafces add the following]
+# static ip
+auto eno1
+iface eno1 inet static
+      address [your static ip e.g. 155.207.xxx.yyy]
+      netmask 255.255.255.0
+      gateway 155.207.xxx.100
+      dns-nameservers 1.1.1.1 8.8.8.8
+        
+save and exit
+
+to find the innterface provide
+
+$sudo networkctl list
+
+and find the TYPE ether.
+
+Then,
+$sudo ifdown -a
+$sudo ifup -a
+
 --- thunar archive manager
 $sudo apt-get install thunar-archive-plugin
 $sudo apt-get install file-roller
