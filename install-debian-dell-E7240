@@ -58,10 +58,18 @@ $sudo apt-get install nmap
 $sudo apt-get install texlive-full
 $sudo apt-get install texmaker
 $sudo aptitude python3-pip
+$sudo apt-get install redshift
+$sudo apt-get install spyder
+
+--- mounting ntfs usb 
+$sudo apt-get install ntfs-3g
+$lsblk
+$mkdir /media/usb-mount
+$sudo mount -t ntfs-3g -o draz /dev/sd{xy} /media/usb-mount/
 
 --- photograph
-$sudo apt-get install darktable #Awesome editing software
-$sudo apt-get install gphoto2  # Import your photos from your camera. Command line tool.
+$sudo apt-get install darktable # Awesome editing software
+$sudo apt-get install gphoto2   # Import your photos from your camera. Command line tool.
 
 --- backlight
 press fn + -->
@@ -135,9 +143,3 @@ Section "InputClass"
 	Option	"DisableWhileTyping" "on"
 EndSection
 
---- mounting ntfs usb 
-
-$sudo apt-get install ntfs-3g
-$lsblk
-$mkdir /media/usb-mount
-$sudo mount -t ntfs-3g -o draz /dev/sd{xy} /media/usb-mount/
