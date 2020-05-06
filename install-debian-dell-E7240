@@ -6,7 +6,6 @@ Debian 9, lattitude E7240
 ===== Although, we love debian!         =====
 
 ---wifi
-
 $su
 #apt-get update
 #apt-get upgrade
@@ -16,8 +15,7 @@ $su
 #modprobe iwlwifi
 #apt-get install wicd
 
-It may occur after update/upgrade the names for network interfaces to change. Check with ifconfig. This may have
-result on your wifi connections.
+It may occur after update/upgrade the names for network interfaces to change. Check with ifconfig. This may have negative result on your wifi connections.
 
 ---set up static ip
 turn of wifi from wicd
@@ -59,6 +57,7 @@ $sudo apt-get install texlive-full
 $sudo apt-get install texmaker
 $sudo aptitude python3-pip
 $sudo apt-get install redshift
+$sudo apt-get install redshift-gtk
 $sudo apt-get install spyder
 
 --- mounting ntfs usb 
@@ -90,7 +89,7 @@ add
 --- Change your dns server
 
 $sudo apt-get install resolvconf
-edit /etc/resolvconf/resolv.conf.d/head
+then edit /etc/resolvconf/resolv.conf.d/head
 
 $sudo nano /etc/resolvconf/resolv.conf.d/head
 #add 
