@@ -118,8 +118,8 @@ Reboot
 							============
 
 
-- Does not correctly starts after hinernations (keyboard is inactive)
-Although using I3 this does not happen.
+- Does not correctly starts after hibernation (keyboard is inactive)
+  Although using I3 the previous problem is dissapeared.
 
 - It may happen after update, the file /etc/X11/xorg.conf.d/40-libinput.conf 
 to be deleted [https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931627]. 
